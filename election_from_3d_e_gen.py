@@ -1,11 +1,30 @@
 
-import itertools
 import os
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QMessageBox, QFileDialog
 from PyQt6.QtGui import QStandardItemModel, QStandardItem
 from PyQt6 import uic
 from pypdf import PdfWriter
+import pandas as pd
+import sqlite3
+
+
+# class ElectionForm3DEGenerator:
+#     def generate_form(self):
+#         token = self.ui.le_watoken.text().strip()
+#         if token:
+#             try:
+#                 conn = sqlite3.connect('election_form.db')
+#                 c = conn.cursor()
+#                 c.execute('CREATE TABLE IF NOT EXISTS election_nomination_details (id INTEGER PRIMARY KEY, sl_no INTEGER, name TEXT, guardians_name TEXT, age INTEGER, address TEXT, particulars_of_origin TEXT, party_affiliation TEXT, assembly_con TEXT, part_no TEXT, ser_no TEXT, proposer TEXT, prop_part_no TEXT, prop_serial_no TEXT, nomination_date TEXT)')
+
+#                 c.execute('SELECT * FROM election_form')
+#                 conn.commit()
+#                 conn.close()
+#             except sqlite3.Error as e:
+#                 print(e)
+#                 QMessageBox.critical(self, 'Error', 'An error occurred while creating the database')
+#                 return
 
 try:
     os.chdir(sys._MEIPASS)
